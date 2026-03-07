@@ -1,0 +1,17 @@
+.stack-container { 
+        position: relative; /* Батько, всередині якого ми рухаємо блоки */
+        height: 300px; 
+    }
+    .layer { 
+        position: absolute; /* ОБОВ'ЯЗКОВО для накладання */
+        width: 150px; 
+        height: 150px; 
+        border: 2px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .blue  { background: lightblue; top: 0; left: 0; z-index: 10; }   /* Буде зверху всіх */
+    .red   { background: salmon; top: 40px; left: 40px; z-index: 5; }  /* Посередині */
+    .green { background: lightgreen; top: 80px; left: 80px; z-index: 1; } /* Під усіма */   

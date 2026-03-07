@@ -1,0 +1,4 @@
+.img-sim { width: 150px; height: 100px; background: orange; margin: 10px; }
+.f-left  { float: left; }
+.f-right { float: right; }
+.text { border: 1px solid #000; padding: 10px; }
