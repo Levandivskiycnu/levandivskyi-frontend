@@ -1,0 +1,102 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at center, #ffffff 0%, #e0e0e0 100%);
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.logo {
+    text-align: center;
+    font-size: 3rem;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(212, 175, 55, 0.6);
+    margin-bottom: 30px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+}
+
+.menu a {
+    color: #444;
+    font-weight: bold;
+    text-decoration-line: underline;
+    text-decoration-style: double;
+    text-decoration-color: #d4af37;
+    cursor: pointer;
+}
+
+.jewel-card {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    resize: both; 
+    overflow: auto;
+    outline: 3px dashed #d4af37;
+    outline-offset: 10px;
+    border: 20px solid transparent;
+    border-image-source: url("https://www.transparenttextures.com/patterns/gold-glitter.png"); /* Приклад ресурсу */
+    border-image-slice: 30;
+    border-image-width: 15px;
+    border-image-outset: 5px;
+    border-image-repeat: round;
+    border-radius: 15px;
+}
+
+.image-placeholder {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    border: 2px solid #ddd;
+    margin: 20px 0;
+}
+
+.order-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.order-form input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #1a1a1a;
+    border-radius: 5px;
+    font-size: 1rem;
+    caret-color: #d4af37;
+    cursor: text;
+}
+.info-panel {
+    margin-top: 30px;
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+    border: 8px solid;
+    border-image-source: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+    border-image-slice: 1;
+}
+.gold-quote {
+    font-style: italic;
+    color: #555;
+    padding: 10px;
+    cursor: help; 
+}
+button, .btn {
+    padding: 10px 20px;
+    background: #1a1a1a;
+    color: gold;
+    border: none;
+    border-radius: 4px;
+    cursor: wait; 
+}
