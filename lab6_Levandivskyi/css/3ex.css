@@ -1,0 +1,55 @@
+.scene {
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Важливо для 3D ефекту */
+    perspective: 800px; 
+    background-color: #2c3e50;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: transform 0.6s ease;
+}
+
+/* 1. matrix3d(n1, n2, ..., n16) */
+.box-matrix {
+    background-color: #e74c3c;
+    /* Поворот по Y та невеликий нахил */
+    transform: matrix3d(
+        0.866, 0, 0.5, 0, 
+        0, 1, 0, 0, 
+        -0.5, 0, 0.866, 0, 
+        0, 0, 0, 1
+    );
+}
+
+/* 2. translate3d(x, y, z) - згідно варіанту */
+.box-translate {
+    background-color: #3498db;
+    /* Зміщення вправо, вгору та "наближення" до глядача (z) */
+    transform: translate3d(20px, -30px, 100px);
+}
+
+/* 3. Множинні трансформації з використанням translate3d */
+.box-multi {
+    background-color: #f1c40f;
+    /* Поворот навколо осі X та зміщення вглиб (z = -50px) */
+    transform: rotateX(45deg) translate3d(0, 0, -50px) scale3d(1.2, 1.2, 1);
+}
+
+/* Ефект при наведенні для інтерактивності */
+.box:hover {
+    transform: rotateY(180deg);
+    background-color: #2ecc71;
+}

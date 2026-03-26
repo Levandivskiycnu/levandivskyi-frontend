@@ -1,0 +1,40 @@
+
+.container {
+  display: flex;
+  gap: 50px;
+  padding: 100px;
+  justify-content: center;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: #4CAF50;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: sans-serif;
+  transition: transform 0.5s ease; 
+}
+
+.matrix-box {
+  transform: matrix(1.2, 0, 0, 1.2, 20, 20);
+  background-color: #2196F3;
+}
+
+.skew-box {
+  background-color: #FF5722;
+  transform-origin: top left;
+  transform: skewY(20deg);
+}
+
+.multi-box {
+  background-color: #9C27B0;
+  transform: rotate(15deg) scale(0.8) skewY(-10deg);
+}
+
+.box:hover {
+  transform: none; 
+}
