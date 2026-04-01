@@ -1,0 +1,114 @@
+/* Базове скидання для правильного розрахунку розмірів */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Сторінка на всю висоту екрана без зайвих скролів */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #fcfbf7;
+    height: 100vh;
+    overflow: hidden;
+    color: #333;
+}
+
+/* Головна обгортка на всю сторінку */
+.wrapper {
+    width: 100%;
+    height: 100%;
+    font-size: 0; /* Прибирає проміжки між inline-block */
+}
+
+/* Загальний клас для колонок */
+.col {
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    font-size: 16px;
+}
+
+/* === БЛОК 2 (Ліва колонка) === */
+.left-sidebar {
+    width: 15%; /* Ширина лівого блоку */
+    background-color: #f4d03f; /* Золотавий колір */
+    background-image: linear-gradient(180deg, #f4d03f 0%, #ca9e2b 100%);
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* === СЕРЕДНЯ КОЛОНКА (Блоки 1, 4, 3) === */
+.main-container {
+    width: 70%; 
+    background-color: #fff;
+}
+
+/* БЛОК 1 (Шапка сайту) */
+.header-block {
+    width: 100%;
+    height: 15%; 
+    background-color: #1a5276; 
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+        }
+/* БЛОК 4 (Основний контент) */
+.content-block {
+    width: 100%;
+    height: 70%; /* 70% висоти за умовою! */
+    padding: 40px;
+    overflow-y: scroll; /* Скролбар для тексту */
+    background-color: #fff;
+    text-align: justify;
+}
+
+/* БЛОК 3 (Підвал сайту) */
+.footer-block {
+    width: 100%;
+    height: 15%; /* 15% висоти */
+    background-color: #1a5276;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #ca9e2b;
+}
+
+/* === БЛОК СПРАВА (Білий порожній) === */
+.right-sidebar {
+    width: 15%; /* Ширина правого блоку */
+    background-color: #fdfefe;
+    border-left: 1px solid #eaeaea;
+}
+
+/* --- Елементи оформлення та умови завдання --- */
+.rotated-title {
+display: inline-block;
+transform: rotate(-3deg); /* Поворот за умовою */
+color: #ca9e2b;
+font-size: 24px;
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+font-family: 'Georgia', serif;
+}
+
+p {
+line-height: 1.8;
+margin-bottom: 20px;
+color: #555;
+}
+
+.diamond-icon {
+            font-size: 28px;
+            margin-top: 10px;
+        }
