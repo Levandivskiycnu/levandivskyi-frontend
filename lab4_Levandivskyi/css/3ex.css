@@ -26,7 +26,7 @@ h4 {
 .column-1, .column-2 {
     position: absolute; 
     top: 100px;         
-    height: 120%;       
+    height: 80%;       
     border: 2px double red; 
     padding: 10px;      
     overflow-y: auto;   
@@ -41,18 +41,19 @@ h4 {
 
 /* 5. Специфічні налаштування для першого блоку */
 .column-1 {
+    margin-left: 20px;
     width: 600px;       
     left: 40px;        
     background-image: url(../back/bg_menu.gif);
     background-repeat: repeat-x;
     background-position: center; 
+    background-color: #ffcc99;
 }
 
 /* 6. Специфічні налаштування для другого блоку */
 .column-2 {
     width: 400px;      
-    
-    left: 660px;        
+    left: 700px;        
     background-image: url(../back/bg_menu.gif);
     background-repeat: repeat-x;
     background-position: top;    
