@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #fcfbf7;
+    height: 100vh;
+    overflow: hidden; 
+}
+
+/* Головний контейнер: ділимо екран на ліву панель та все інше */
+.wrapper {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Ліва панель: фіксована ширина 15% */
+.left-sidebar {
+    flex: 0 0 15%; /* Не розширюється, не стискається, база 15% */
+    background-color: #f4d03f;
+    background-image: linear-gradient(180deg, #f4d03f 0%, #ca9e2b 100%);
+    display: flex;
+    flex-direction: column; /* Щоб текст був по центру вертикально */
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+/* Центральна частина: займає 70% і ділиться вертикально на 3 частини */
+.main-column {
+    flex: 0 0 70%;
+    display: flex;
+    flex-direction: column; /* Хедер зверху, футер знизу */
+}
+
+.header-block {
+    flex: 0 0 15%; /* Висота хедера 15% */
+    background-color: #1a5276;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+}
+
+.content-block {
+    flex: 1; /* Займає весь вільний простір між хедером і футером */
+    background-color: #fff;
+    padding: 40px;
+    overflow-y: auto; 
+    text-align: justify;
+}
+
+.footer-block {
+    flex: 0 0 15%; /* Висота футера 15% */
+    background-color: #1a5276;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #ca9e2b;
+}
+
+/* Права порожня панель */
+.right-sidebar {
+    flex: 0 0 15%;
+    background-color: #fdfefe;
+    border-left: 1px solid #eaeaea;
+}
+
+/* Інші стилі залишаються без змін */
+.left-sidebar h1 { font-size: 48px; }
+
+.rotated-title {
+    display: inline-block;
+    transform: rotate(-3deg);
+    color: #ca9e2b;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+h2, h3, h4 {
+    font-family: 'Georgia', serif;
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 16px;
+}
