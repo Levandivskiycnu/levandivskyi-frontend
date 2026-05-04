@@ -5,53 +5,56 @@
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', serif;
     background-color: #fcfbf7;
     height: 100vh;
-    overflow: hidden; 
-    display: grid; 
+    overflow: hidden;
+    display: grid;
 }
 
 .wrapper {
     display: grid;
     height: 100vh;
+    /* Три колонки: 15%, 70%, 15% */
     grid-template-columns: 15% 70% 15%;
+    /* Три ряди: 15%, решта (1fr), 15% */
     grid-template-rows: 15% 1fr 15%;
-    grid-template-areas: 
-        "sidebar header  empty"
-        "sidebar main    empty"
-        "sidebar footer  empty";
 }
 
+/* Ліва панель: займає 1-шу колонку і розтягується з 1-го по 4-й ряд */
 .left-sidebar {
-    grid-area: sidebar;
-    background-color: #ca9e2b;
+    grid-column: 1; 
+    grid-row: 1 / 4; 
+    background-color: #f4d03f;
     display: grid;
-    place-items: center; 
-    color: #fff;
-    text-align: center;
+    place-items: center;
 }
 
+/* Шапка: 2-га колонка, 1-й ряд */
 .header-block {
-    grid-area: header;
+    grid-column: 2;
+    grid-row: 1;
     background-color: #1a5276;
     color: #fff;
     display: grid;
-    place-items: center; 
+    place-items: center;
 }
 
+/* Контент: 2-га колонка, 2-й ряд */
 .content-block {
-    grid-area: main;
+    grid-column: 2;
+    grid-row: 2;
     background-color: #fff;
     padding: 40px;
-    overflow-y: auto; 
+    overflow-y: auto;
     display: grid;
-    align-content: start; 
-    gap: 10px; 
+    align-content: start;
 }
 
+/* Футер: 2-га колонка, 3-й ряд */
 .footer-block {
-    grid-area: footer;
+    grid-column: 2;
+    grid-row: 3;
     background-color: #1a5276;
     color: #fff;
     display: grid;
@@ -59,25 +62,10 @@ body {
     border-top: 2px solid #ca9e2b;
 }
 
+/* Права панель: 3-тя колонка, займає всі ряди */
 .right-sidebar {
-    grid-area: empty;
+    grid-column: 3;
+    grid-row: 1 / 4;
     background-color: #fdfefe;
-    display: grid;
-}
-
-.rotated-title {
-    display: grid;
-    place-items: center;
-    justify-self: start; 
-    transform: rotate(-3deg);
-    color: #ca9e2b;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-ul {
-    display: grid; 
-    gap: 10px;
-    padding-left: 20px;
-    color: #555;
+    border-left: 1px solid #eaeaea;
 }
