@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+  .layout {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    gap: 10px;
+  }
+  .header {
+    grid-column: 1 / 4; 
+    background: coral;
+  }
+  .sidebar {
+    background: lightblue;
+  }
+  .content {
+    background: lightgreen;
+  }
+  .footer{
+    grid-column: 1/4;
+    background-color: blue;
+    padding: 20px;
+  }
+</style>
+</head>
+<body>
+    <div class="layout">
+  <header class="header">Шапка</header>
+  <main class="content">Основний текст</main>
+  <aside class="sidebar">Меню</aside>
+  <footer class = "footer">Реклама</footer>
+</div>
+</body>
+</html>
