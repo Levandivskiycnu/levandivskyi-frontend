@@ -5,10 +5,9 @@
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif;
-    background-color: #fcfbf7;
+    font-family: 'Times New Roman', serif;
     height: 100vh;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .wrapper {
@@ -21,6 +20,7 @@ body {
     flex: 0 0 15%; 
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -28,9 +28,7 @@ body {
 
 .left-sidebar {
     background: linear-gradient(180deg, #f4d03f 0%, #ca9e2b 100%);
-    flex-direction: column;
-    color: #fff;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    color: white;
 }
 
 .right-sidebar {
@@ -38,72 +36,35 @@ body {
     border-left: 1px solid #eaeaea;
 }
 
+
 .main-column {
-    flex: 0 0 70%; /* Ширина 70% */
+    flex: 0 0 70%; 
     display: flex;
-    flex-direction: column; /* Елементи стають один під одним */
-    height: 100%;
+    flex-direction: column; 
 }
 
-/* Внутрішні блоки центральної колонки */
 .header-block {
     flex: 0 0 15%; /* Висота 15% */
     background-color: #1a5276;
-    color: #fff;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    letter-spacing: 2px;
 }
 
 .content-block {
-    flex: 1; /* Забирає весь вільний простір (70% висоти) */
+    flex: 1; /* Займає весь вільний простір між хедером і футером */
     background-color: #fff;
     padding: 40px;
-    overflow-y: auto; /* Скрол тільки всередині контенту */
+    overflow-y: auto; /* Скрол тільки для тексту */
 }
 
 .footer-block {
     flex: 0 0 15%; /* Висота 15% */
     background-color: #1a5276;
-    color: #fff;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     border-top: 2px solid #ca9e2b;
-}
-
-
-.left-sidebar h1 { font-size: 48px; }
-
-.rotated-title {
-    display: inline-block;
-    transform: rotate(-3deg);
-    color: #ca9e2b;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 20px 0;
-}
-
-h2, h3, h4 {
-    font-family: 'Georgia', serif;
-    margin-bottom: 10px;
-}
-
-p {
-    line-height: 1.8;
-    margin-bottom: 20px;
-    color: #555;
-    font-size: 16px;
-    text-align: justify;
-}
-
-a {
-    color: #1a5276;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
 }
