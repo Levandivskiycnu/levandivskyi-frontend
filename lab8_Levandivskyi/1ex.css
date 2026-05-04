@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,67 +6,89 @@
 }
 
 body {
-    font-family: 'Times New Roman', serif;
+    font-family: 'Times New Roman', Times, serif;
     background-color: #fcfbf7;
     height: 100vh;
-    overflow: hidden;
-    display: grid;
+    overflow: hidden; 
 }
+
 
 .wrapper {
     display: grid;
     height: 100vh;
-    /* Три колонки: 15%, 70%, 15% */
     grid-template-columns: 15% 70% 15%;
-    /* Три ряди: 15%, решта (1fr), 15% */
     grid-template-rows: 15% 1fr 15%;
+    grid-template-areas: 
+        "sidebar header  empty"
+        "sidebar main    empty"
+        "sidebar footer  empty";
 }
 
-/* Ліва панель: займає 1-шу колонку і розтягується з 1-го по 4-й ряд */
 .left-sidebar {
-    grid-column: 1; 
-    grid-row: 1 / 4; 
+    grid-area: sidebar;
     background-color: #f4d03f;
-    display: grid;
-    place-items: center;
+    background-image: linear-gradient(180deg, #f4d03f 0%, #ca9e2b 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    text-align: center;
 }
 
-/* Шапка: 2-га колонка, 1-й ряд */
+.left-sidebar h1 { font-size: 48px; }
+
 .header-block {
-    grid-column: 2;
-    grid-row: 1;
+    grid-area: header;
     background-color: #1a5276;
     color: #fff;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
 }
 
-/* Контент: 2-га колонка, 2-й ряд */
 .content-block {
-    grid-column: 2;
-    grid-row: 2;
+    grid-area: main;
     background-color: #fff;
     padding: 40px;
-    overflow-y: auto;
-    display: grid;
-    align-content: start;
+    overflow-y: auto; 
+    text-align: justify;
 }
 
-/* Футер: 2-га колонка, 3-й ряд */
 .footer-block {
-    grid-column: 2;
-    grid-row: 3;
+    grid-area: footer;
     background-color: #1a5276;
     color: #fff;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-top: 2px solid #ca9e2b;
 }
 
-/* Права панель: 3-тя колонка, займає всі ряди */
 .right-sidebar {
-    grid-column: 3;
-    grid-row: 1 / 4;
+    grid-area: empty;
     background-color: #fdfefe;
     border-left: 1px solid #eaeaea;
+}
+
+.rotated-title {
+    display: inline-block;
+    transform: rotate(-3deg);
+    color: #ca9e2b;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+h2, h3, h4 {
+    font-family: 'Georgia', serif;
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 16px;
 }

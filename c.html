@@ -1,40 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-   <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
   .layout {
     display: grid;
-    grid-template-columns: 80% 20%;
-    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 20% 80%; /* 1-ша колонка для меню, 2-га для контенту */
+    grid-template-rows: 100px 1fr 50px; /* Header, Content, Footer */
     height: 100vh;
     gap: 10px;
   }
-  .header {
-    grid-column: 1 / 4; 
-    background: coral;
-  }
+
+  /* 1. SIDEBAR: Зліва на всю висоту */
   .sidebar {
+    grid-column: 1;    /* Перша колонка */
+    grid-row: 1 / 4;   /* Від лінії 1 (топ) до лінії 4 (дно) */
     background: lightblue;
   }
+
+  /* 2. HEADER: Справа зверху */
+  .header {
+    grid-column: 2;    /* Друга колонка */
+    grid-row: 1;       /* Перший ряд */
+    background: coral;
+  }
+
+  /* 3. CONTENT: Справа посередині */
   .content {
+    grid-column: 2;    /* Друга колонка */
+    grid-row: 2;       /* Другий ряд */
     background: lightgreen;
   }
-  .footer{
-    grid-column: 1/4;
+
+  .footer {
+    grid-column: 2;    /* Друга колонка */
+    grid-row: 3;       /* Третій ряд */
     background-color: blue;
-    padding: 20px;
+    color: white;
+  
   }
 </style>
 </head>
 <body>
-    <div class="layout">
+<div class="layout">
   <header class="header">Шапка</header>
-  <main class="content">Основний текст</main>
-  <aside class="sidebar">Меню</aside>
-  <footer class = "footer">Реклама</footer>
+   <aside class="sidebar">Меню (Блакитний від верху)</aside>
+  <main class="content">Основний текст (Зелений зліва)</main>
+  <footer class="footer">Реклама</footer>
 </div>
 </body>
 </html>
