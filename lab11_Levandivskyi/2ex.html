@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Демонстрація Псевдоелементів</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; padding: 40px; }
+        
+        /* ::first-letter — стилізація першої літери (буквиця) */
+        .intro::first-letter {
+            font-size: 3em;
+            font-weight: bold;
+            color: #e63946;
+            float: left;
+            margin-right: 8px;
+            line-height: 1;
+        }
+
+        /* ::first-line — стилізація першого рядка тексту */
+        .intro::first-line {
+            font-variant: small-caps;
+            font-weight: bold;
+            color: #1d3557;
+        }
+
+        /* ::before — додавання контенту ПЕРЕД елементом */
+        .quote::before {
+            content: "“";
+            font-size: 2em;
+            color: #457b9d;
+            vertical-align: sub;
+            margin-right: 5px;
+        }
+
+        /* ::after — додавання контенту ПІСЛЯ елемента */
+        .quote::after {
+            content: " — (Автор невідомий)";
+            font-style: italic;
+            color: #a8dadc;
+            font-size: 0.9em;
+        }
+
+        /* Додатковий стиль для блоку */
+        .box {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #f1faee;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Стилізація тексту</h2>
+    <div class="box">
+        <p class="intro">
+            Цей текст демонструє роботу псевдоелементів first-letter та first-line. 
+            Перша літера стала великою та червоною, а весь перший рядок написаний 
+            малими прописними літерами (small-caps). Спробуйте змінити ширину вікна, 
+            і ви побачите, як перший рядок динамічно змінюється.
+        </p>
+    </div>
+
+    <h2>Декоративні елементи</h2>
+    <div class="box">
+        <p class="quote">Програмування — це не те, що ви знаєте, а те, що ви можете з'ясувати.</p>
+    </div>
+
+</body>
+</html>

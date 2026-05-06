@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Комплексна Веб-форма (Готовий код)</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; }
+        .container { max-width: 650px; margin: 0 auto; background: white; padding: 20px; border: 1px solid #ccc; border-radius: 10px; }
+        fieldset { border: 2px solid #007bff; border-radius: 8px; padding: 15px; margin-bottom: 20px; }
+        legend { font-weight: bold; color: #007bff; padding: 0 10px; }
+        .field-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: 600; }
+        input[type="text"], input[type="email"], input[type="password"], textarea, select {
+            width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;
+        }
+        .inline { display: inline-block; margin-right: 15px; font-weight: normal; }
+        .controls { background: #eee; padding: 20px; border-radius: 8px; display: flex; gap: 10px; justify-content: center; }
+        
+        /* Стилі для кнопок */
+        input[type="submit"] { background-color: #007bff; color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 4px; }
+        input[type="reset"] { background-color: #dc3545; color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 4px; }
+        input[type="button"] { background-color: #28a745; color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 4px; }
+        input:hover { opacity: 0.9; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Демонстрація елементів форми</h1>
+    
+    <form action="#" method="get">
+        
+        <fieldset>
+            <legend>Текстові дані</legend>
+            
+            <div class="field-group">
+                <label for="id_text">Однорядкове поле (text):</label>
+                <input type="text" id="id_text" name="username" placeholder="Введіть текст..." required>
+            </div>
+
+            <div class="field-group">
+                <label for="id_area">Багаторядкова область (textarea):</label>
+                <textarea id="id_area" name="comment" rows="3" placeholder="Ваш коментар..."></textarea>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Типи Password, Email, Range</legend>
+            
+            <div class="field-group">
+                <label for="id_pass">Пароль:</label>
+                <input type="password" id="id_pass" name="pass" required>
+            </div>
+
+            <div class="field-group">
+                <label for="id_email">Email:</label>
+                <input type="email" id="id_email" name="email" placeholder="mail@example.com">
+            </div>
+
+            <div class="field-group">
+                <label for="id_range">Діапазон (range):</label>
+                <input type="range" id="id_range" name="volume" min="0" max="100" value="70">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Вибір (Radio, Checkbox, Select)</legend>
+            
+            <div class="field-group">
+                <p><b>Оберіть один варіант (Radio):</b></p>
+                <input type="radio" id="r1" name="choice" value="1" checked> 
+                <label class="inline" for="r1">Варіант 1 (за замовчуванням)</label>
+                <input type="radio" id="r2" name="choice" value="2"> 
+                <label class="inline" for="r2">Варіант 2</label>
+            </div>
+
+            <div class="field-group">
+                <p><b>Множинний вибір (Checkbox):</b></p>
+                <input type="checkbox" id="c1" name="skills" value="html" checked> <label class="inline" for="c1">HTML</label>
+                <input type="checkbox" id="c2" name="skills" value="css"> <label class="inline" for="c2">CSS</label>
+            </div>
+
+            <div class="field-group">
+                <label for="id_sel">Випадаючий список з групуванням:</label>
+                <select id="id_sel" name="city">
+                    <optgroup label="Великі міста">
+                        <option value="kyiv">Київ</option>
+                        <option value="kharkiv">Харків</option>
+                    </optgroup>
+                    <optgroup label="Інші">
+                        <option value="lviv">Львів</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div class="field-group">
+                <label for="id_mult">Список множинного вибору (multiple):</label>
+                <select id="id_mult" name="tags" multiple size="3">
+                    <option value="t1">Тег 1</option>
+                    <option value="t2">Тег 2</option>
+                    <option value="t3">Тег 3</option>
+                    <option value="t4">Тег 4</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <div class="controls">
+            <input type="submit" value="Відправити">
+            
+            <input type="reset" value="Очистити форму">
+            
+            <input type="button" value="Click me!" onClick='alert("Oh, you have been clicked me!!!")'>
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>

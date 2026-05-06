@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Псевдокласи: Валідація та Структура</title>
+    <style>
+        body { font-family: sans-serif; padding: 30px; background-color: #f4f4f9; }
+        form { max-width: 400px; background: white; padding: 20px; border-radius: 10px; shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        
+        .input-group { margin-bottom: 15px; }
+        input { width: 100%; padding: 10px; border: 2px solid #ccc; border-radius: 5px; outline: none; }
+
+        /* 1. :valid — стиль для правильно заповненого поля */
+        input:focus:valid {
+            border-color: #2ecc71;
+            background-color: #f0fff4;
+        }
+
+        /* 2. :invalid — стиль для поля з помилкою */
+        input:focus:invalid {
+            border-color: #e74c3c;
+            background-color: #fff5f5;
+        }
+
+        /* 3. :read-only — стиль для полів, які не можна редагувати */
+        input:read-only {
+            background-color: #e9ecef;
+            border-style: dashed;
+            cursor: not-allowed;
+        }
+
+        /* 4. :first-of-type — стилізуємо перший елемент певного типу у контейнері */
+        .input-group:first-of-type label {
+            color: #1a73e8;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.8em;
+        }
+
+        /* 5. :last-of-type — стилізуємо останній елемент певного типу */
+        .input-group:last-of-type {
+            margin-top: 30px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+
+        label { display: block; margin-bottom: 5px; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+
+    <form>
+        <div class="input-group">
+            <label>Електронна пошта (Обов'язково):</label>
+            <input type="email" placeholder="Введіть коректний email" required>
+        </div>
+
+        <div class="input-group">
+            <label>Вік (від 18 до 99):</label>
+            <input type="number" min="18" max="99" placeholder="18">
+        </div>
+
+        <div class="input-group">
+            <label>ID Користувача (Тільки читання):</label>
+            <input type="text" value="USER-777888" readonly>
+        </div>
+
+        <div class="input-group">
+            <label>Примітка:</label>
+            <small>Поля підсвічуються зеленим, якщо дані вірні, і червоним — якщо ні.</small>
+        </div>
+    </form>
+
+</body>
+</html>

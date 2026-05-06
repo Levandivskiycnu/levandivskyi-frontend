@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Стилізація посилань</title>
+    <style>
+        .custom-link {
+            font-size: 1.2em;
+            text-decoration: none; /* Прибираємо стандартне підкреслення */
+            padding: 5px 10px;
+            transition: all 0.3s ease; /* Плавний перехід кольорів */
+        }
+
+        /* 1. :link — Стан посилання, на яке ще не натискали */
+        .custom-link:link {
+            color: #1a73e8;
+            border-bottom: 2px solid #1a73e8;
+        }
+
+        /* 2. :visited — Стан посилання, за яким користувач вже переходив */
+        .custom-link:visited {
+            color: #9c27b0; /* Фіолетовий колір для відвіданих */
+            border-bottom-color: #9c27b0;
+        }
+
+        /* 3. :hover — Коли курсор миші знаходиться над посиланням */
+        .custom-link:hover {
+            color: white;
+            background-color: #1a73e8;
+            border-radius: 4px;
+            text-decoration: underline;
+        }
+
+        /* 4. :active — Момент натискання (клік лівою кнопкою миші) */
+        .custom-link:active {
+            color: #ff5722;
+            background-color: #ffe0b2;
+            transform: translateY(2px); /* Ефект "натискання" кнопки */
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Приклад роботи псевдокласів для посилань</h2>
+    
+    <p>
+        Спробуйте взаємодіяти з цим посиланням: 
+        <a href="https://www.google.com" target="_blank" class="custom-link">Відвідати Google</a>
+    </p>
+
+
+</body>
+</html>
