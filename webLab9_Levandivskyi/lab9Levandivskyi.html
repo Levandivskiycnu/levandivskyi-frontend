@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Фірмовий стиль</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap');
+
+        body {
+            background-color: #121212; 
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif; 
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Montserrat', sans-serif; 
+            color: #3b82f6;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .box {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #a855f7;
+            margin-top: 0;
+        }
+
+        .color-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .color-cube {
+            width: 20px; 
+            height: 20px; 
+            margin-right: 10px;
+            border-radius: 3px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .btn-main { background-color: #3b82f6; color: white; }
+        .btn-sec { background-color: #00a896; color: white; }
+    </style>
+</head>
+<body>
+
+    <h1>Презентація фірмового стилю</h1>
+
+    <div class="grid-container">
+
+        <div class="box full-width">
+            <h2>1. Варіанти логотипу (3 картинки)</h2>
+            <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 10px;">
+                <div>
+                    <img src="ImgAndGif/vnuz.jpg" alt="Знак вверху, текст внизу" onerror="this.src='https://placehold.co/150x100/252525/3b82f6?text=Лого+Внизу'">
+                    <p style="font-size: 12px; text-align: center;">Текст внизу</p>
+                </div>
+                <div>
+                    <img src="ImgAndGif/right.jpg" alt="Знак зліва, текст справа" onerror="this.src='https://placehold.co/150x100/252525/a855f7?text=Лого+Справа'">
+                    <p style="font-size: 12px; text-align: center;">Текст справа</p>
+                </div>
+                <div style="background-color: white; color: black; padding: 5px; border-radius: 4px;">
+                    <img src="ImgAndGif/alt.jpg" alt="Ахроматичний логотип" onerror="this.src='https://placehold.co/150x100/ffffff/000000?text=Чорно-біле'">
+                    <p style="font-size: 12px; text-align: center; color: black;">Ахроматичний</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <h2>2. Анімований банер (GIF)</h2>
+            <img src="ImgAndGif/GIFWeb.gif" alt="Рекламний банер" style="max-width: 100%;" onerror="this.src='https://placehold.co/468x60/252525/00a896?text=Анімація+.GIF'">
+        </div>
+
+        <div class="box">
+            <h2>3. Фірмові кольори</h2>
+            
+            <div class="color-row"> 
+                <div class="color-cube" style="background: #121212; border: 1px solid #555555;"></div>
+                <p style="font-size: 12px; margin: 0;">#121212 — Фон сайту</p>
+            </div>
+
+            <div class="color-row"> 
+                <div class="color-cube" style="background: #3b82f6;"></div>
+                <p style="font-size: 12px; margin: 0;">#3b82f6 — Головний синій</p>
+            </div>
+
+            <div class="color-row"> 
+                <div class="color-cube" style="background: #a855f7;"></div>
+                <p style="font-size: 12px; margin: 0;">#a855f7 — Акцентний фіолетовий</p>
+            </div>
+        </div>
+            <div class="color-row"> 
+                <div class="color-cube" style="background: #a855f7;"></div>
+                <p style="font-size: 12px; margin: 0;">#a855f7 — Акцентний фіолетовий</p>
+            </div>
+        </div>
+
+        <div class="box full-width">
+            <h2>4. Шрифти сайту</h2>
+            
+            <p style="font-size: 14px; color: #3b82f6; margin-bottom: 5px;">Заголовки: Montserrat</p>
+            <p style="font-size: 20px; color: #ffffff; font-weight: 700; font-family: 'Montserrat', sans-serif; margin-top: 0;">
+                A B C D E F G H I J K L M N O P Q R S T U V W X Y Z <br>
+                А Б В Г Ґ Д Е Є Ж З И І Ї Й К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ь Ю Я <br>
+                1234567890
+            </p>
+
+            <p style="font-size: 14px; color: #a855f7; margin-bottom: 5px;">Основний текст: Roboto</p>
+            <p style="font-size: 16px; color: #cccccc; font-family: 'Roboto', sans-serif; margin-top: 0;">
+                a b c d e f g h i j k l m n o p q r s t u v w x y z <br>
+                а б в г ґ д е є ж з и і ї й к л м н о п р с т у ф х ц ч ш щ ь ю я
+            </p>
+        </div>
+
+        <div class="box full-width">
+            <h2>5. Кнопки інтерфейсу</h2>
+            <button class="btn btn-main">Надіслати запит</button>
+            <button class="btn btn-sec">Проєкти</button>
+        </div>
+    </div>
+    <button><a href="../index.html">На головну</button>
+
+</body>
+</html>
